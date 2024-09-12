@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 87px 0 141px;
+  padding: 87px 0 141px;
 
   @include mini-desktop {
     padding: 77px 0 121px;
@@ -76,7 +76,9 @@
   }
 
   &__left {
-    max-width: 595px;
+    @include mini-desktop {
+      max-width: 617px;
+    }
   }
 
   &__title {
@@ -108,6 +110,11 @@
 
   &__subtitle {
     margin-bottom: 69px;
+    & br {
+      @include mini-desktop {
+        display: none;
+      }
+    }
   }
 
   &__form {
@@ -241,7 +248,8 @@
     }
 
     &-body {
-      &-th {
+      &-td {
+        white-space: nowrap;
         font-weight: 400;
         font-size: 20px;
         line-height: 1.3;
