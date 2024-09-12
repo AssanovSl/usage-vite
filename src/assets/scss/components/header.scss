@@ -50,7 +50,7 @@
       background-color: var(--neutral-color-10);
       opacity: 0;
       visibility: hidden;
-      transition: 
+      transition:
         left var(--transition),
         opacity var(--transition),
         visibility var(--transition);
@@ -71,9 +71,10 @@
     background-color: var(--neutral-color-130);
     transform: translateY(8px);
     transition: background-color var(--transition);
+    cursor: pointer;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 2px;
       left: 3px;
@@ -82,7 +83,9 @@
       width: 23px;
       height: 23px;
       background-color: var(--neutral-color-120);
-      transition: left var(--transition), background-color var(--transition);
+      transition:
+        left var(--transition),
+        background-color var(--transition);
     }
 
     &-text {
@@ -94,6 +97,11 @@
       text-align: center;
       color: var(--neutral-color-140);
       transform: translateX(-50%);
+      
+      @include small-tablet {
+        top: -28px;
+        font-size: 20px;
+      }
     }
 
     &-checkbox {
@@ -134,10 +142,11 @@
 
     @include small-tablet {
       line-height: 200%;
+      font-size: 20px;
     }
 
-    &::after{
-      content: "";
+    &::after {
+      content: '';
       position: absolute;
       right: 0;
       bottom: -5px;
@@ -146,7 +155,9 @@
       background-color: var(--neutral-color-100);
       opacity: 0;
       visibility: hidden;
-      transition: opacity var(--transition), visibility var(--transition);
+      transition:
+        opacity var(--transition),
+        visibility var(--transition);
     }
 
     &:hover {
@@ -165,12 +176,14 @@
     z-index: var(--z-index-2);
     background-color: #000000b3;
     opacity: 0;
-    visibility: hidden; 
-    transition: opacity var(--transition), visibility var(--transition);
+    visibility: hidden;
+    transition:
+      opacity var(--transition),
+      visibility var(--transition);
 
     &--visible {
       opacity: 1;
-      visibility: visible; 
+      visibility: visible;
     }
   }
 }
