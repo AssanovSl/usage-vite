@@ -30,6 +30,13 @@
   --container-padding: 15px;
   --container-width: 1200px;
 
+  //testimonials
+  --arrow-testimonials-color: white;
+  --testimonials-border: none;
+  --disable-arrow-color: #ced1d8;
+  --disabled-testimonials-border: 1px solid var(--neutral-color-40);
+  --disabled-testimonials-bg: #fff;
+
   @include mini-desktop {
     --container-width: 1000px;
   }
@@ -67,4 +74,11 @@
 
   //overview bg
   --overview-bg-color: #18181d;
+
+  //testimonials
+  --testimonials-border: 1px solid #ced1d8;
+  --testimonials-bg: #fff;
+  --arrow-testimonials-color: #000;
+  --disable-arrow-color: #000;
+  --disabled-testimonials-bg: #ced1d8;
 }

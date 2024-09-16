@@ -1,0 +1,127 @@
+.testimonials {
+  padding: 69px 0 160px;
+
+  &__head {
+    @include flex-all-between;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    max-width: 530px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    max-width: 376px;
+
+    font-weight: 500;
+    line-height: 1.78;
+    color: var(--neutral-color-150);
+  }
+
+  &__rating {
+    @include flex-align-center;
+    gap: 8px;
+    margin-bottom: 19px;
+
+    &-num {
+      font-weight: 500;
+      line-height: 1.62;
+      color: var(--neutral-color-100);
+    }
+  }
+
+  &__slider-wrapper {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 115px;
+      height: 77px;
+      background: url(../img/icons/quotes.svg);
+      transform: translateY(15px);
+    }
+  }
+
+  &__slider {
+    max-width: 898px;
+  }
+
+  &__comment {
+    &-text {
+      font-weight: 500;
+      margin-bottom: 40px;
+      font-size: 40px;
+      line-height: 1.3;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-author {
+      @include flex-align-center;
+      gap: 24px;
+      font-style: normal;
+
+      &-avatar {
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      &-name {
+        font-weight: 600;
+        line-height: 1.44;
+        color: var(--neutral-color-100);
+      }
+
+      &-job {
+        font-weight: 500;
+        line-height: 1.62;
+        color: var(--neutral-color-150);
+      }
+    }
+  }
+
+  &__controls {
+    @include flex-align-center;
+    justify-content: flex-end;
+    gap: 16px;
+    transform: translateY(-40px);
+  }
+
+  &__btn {
+    @include flex-all-center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--neutral-color-100);
+    border: var(--testimonials-border);
+
+    & svg {
+      & path {
+        fill: var(--arrow-testimonials-color);
+      }
+    }
+
+    &:first-child {
+      transform: rotate(180deg);
+    }
+
+    &.swiper-button-disabled {
+      border: var(--disabled-testimonials-border);
+      background-color: var(--disabled-testimonials-bg);
+      cursor: auto;
+      pointer-events: none;
+
+      & svg {
+        & path {
+          fill: var(--disable-arrow-color);
+        }
+      }
+    }
+
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+}

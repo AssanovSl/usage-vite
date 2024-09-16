@@ -7,7 +7,6 @@ export const useInsightSlider = () => {
     modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
-    loop: true,
     centeredSlides: true,
     navigation: {
       nextEl: '.insight__slider-next',
@@ -17,6 +16,17 @@ export const useInsightSlider = () => {
       992: {
         centeredSlides: false,
       },
+    },
+  });
+};
+
+export const useTestimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.testimonials__btn--next',
+      prevEl: '.testimonials__btn--prev',
     },
   });
 };
