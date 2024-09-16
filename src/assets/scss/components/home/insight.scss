@@ -38,31 +38,59 @@
 
   &__slider {
     position: relative;
-    &-btns {
+
+    &-controls {
       @include flex-all-center;
       position: absolute;
       top: 126px;
       left: 50%;
       z-index: var(--z-index-2);
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: #fff;
       transform: translateX(-50%);
+      border-radius: 33%;
+      background-color: #fff;
+    }
 
-      @include tablet {
-        display: none;
-      }
+    &-prev,
+    &-next {
+      @include flex-all-center;
+      width: 40px;
+      height: 80px;
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      background-color: #fff;
+      justify-content: end;
+      transition: all var(--transition);
+    }
 
-      @include small-mobile {
-        display: flex;
-        top: 80px;
-        left: 94%;
-        width: 50px;
-        height: 50px;
+    &-prev {
+      &:hover {
+        transform: translateX(-16px);
+        justify-content: center;
       }
     }
+
+    &-next {
+      transform: scale(-1, -1);
+
+      &:hover {
+        transform: scale(-1, -1) translateX(-16px);
+        justify-content: center;
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include small-mobile {
+      display: flex;
+      top: 80px;
+      left: 94%;
+      width: 50px;
+      height: 50px;
+    }
   }
+
   &__article {
     max-width: 582px;
 
