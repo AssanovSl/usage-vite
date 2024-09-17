@@ -6,6 +6,11 @@
 
     @include mobile {
       padding-top: 86px;
+      padding-bottom: 61px;
+    }
+
+    @include small-mobile {
+      padding-bottom: 41px;
     }
   }
 
@@ -48,6 +53,10 @@
       transform: translateX(-50%);
       border-radius: 33%;
       background-color: #fff;
+
+      @include tablet {
+        display: none;
+      }
     }
 
     &-prev,
@@ -76,10 +85,6 @@
         transform: scale(-1, -1) translateX(-16px);
         justify-content: center;
       }
-    }
-
-    @include tablet {
-      display: none;
     }
 
     @include small-mobile {
