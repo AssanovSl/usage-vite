@@ -7,6 +7,7 @@ import {
   useTestimonialsSlider,
 } from './components/home/slider';
 
+//components
 useTheme();
 useBurger();
 useInsightSlider();
