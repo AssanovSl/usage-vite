@@ -1,0 +1,132 @@
+.hero {
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__subtitle {
+    margin-bottom: 135px;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 433px;
+    right: 7%;
+
+    & svg {
+      position: absolute;
+      top: 28%;
+      left: 28%;
+
+      & rect {
+        fill: var(--neutral-color-100);
+      }
+    }
+
+    &-text {
+      position: relative;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--neutral-color-100);
+      transform: rotate(0deg);
+      transition: transform 0.8s;
+    }
+    $v: &;
+    &:hover {
+      #{$v}-text {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__slider {
+    margin-bottom: 160px;
+    &-wrapper {
+      width: 1335px;
+    }
+    &-article {
+      &.swiper-slide {
+        @include flex-justify-between;
+        flex-direction: column;
+        height: 634px;
+        max-width: 502px;
+      }
+
+      &-title {
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        color: var(--neutral-color-100);
+      }
+
+      &-descr {
+        font-weight: 500;
+        line-height: 1.77778;
+        color: var(--neutral-color-150);
+      }
+
+      &-btn {
+        width: 175px;
+        font-weight: 700;
+        line-height: 1.5;
+
+        padding: 16px 32px;
+        color: var(--neutral-color-10);
+        background-color: var(--neutral-color-100);
+      }
+    }
+
+    &-controls {
+      @include flex-all-center;
+      position: absolute;
+      top: 107px;
+      left: 509px;
+      z-index: var(--z-index-2);
+      transform: translateX(-50%);
+      border-radius: 33%;
+      background-color: #fff;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-prev,
+    &-next {
+      @include flex-all-center;
+      width: 40px;
+      height: 80px;
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      background-color: #fff;
+      justify-content: end;
+      transition: all var(--transition);
+    }
+
+    &-prev {
+      &:hover {
+        transform: translateX(-16px);
+        justify-content: center;
+      }
+    }
+
+    &-next {
+      transform: scale(-1, -1);
+
+      &:hover {
+        transform: scale(-1, -1) translateX(-16px);
+        justify-content: center;
+      }
+    }
+  }
+}

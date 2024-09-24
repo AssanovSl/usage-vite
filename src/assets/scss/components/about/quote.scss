@@ -1,0 +1,27 @@
+.quote {
+  &__container {
+    padding: 80px 0;
+    margin-bottom: 160px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+  }
+
+  &__content {
+    @include flex-justify-between;
+    gap: 50px;
+    &-title {
+      min-width: 480px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      max-width: 522px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--neutral-color-100);
+    }
+  }
+}
