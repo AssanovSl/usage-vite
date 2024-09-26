@@ -1,20 +1,44 @@
 .quote {
+  padding: 80px 0;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+
+  @include tablet {
+    padding: 70px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
   &__container {
-    padding: 80px 0;
-    margin-bottom: 160px;
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
   }
 
   &__content {
     @include flex-justify-between;
+    align-items: center;
     gap: 50px;
+
+    @include small-tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+
     &-title {
       min-width: 480px;
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.04em;
       color: var(--neutral-color-100);
+
+      @include tablet {
+        font-size: 50px;
+        min-width: auto;
+
+      }
+
+      @include mobile {
+        font-size: 38px;
+      }
     }
 
     &-descr {
@@ -22,6 +46,14 @@
       font-weight: 600;
       line-height: 1.5;
       color: var(--neutral-color-100);
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
     }
   }
 }

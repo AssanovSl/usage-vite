@@ -1,4 +1,14 @@
 .hero {
+  padding: 105px 0 160px;
+
+  @include mobile {
+    padding: 55px 0 95px;
+  }
+
+  @include mini-desktop {
+    padding: 75px 0 130px;
+  }
+
   &__container {
     position: relative;
   }
@@ -10,16 +20,35 @@
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 60px;
+      text-align: center;
+    }
   }
 
   &__subtitle {
     margin-bottom: 135px;
+
+    @include tablet {
+      margin-bottom: 95px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    @include mobile {
+      margin-bottom: 0;
+    }
   }
 
   &__circle {
     position: absolute;
     top: 433px;
     right: 7%;
+
+    @include tablet {
+      display: none;
+    }
 
     & svg {
       position: absolute;
@@ -50,9 +79,20 @@
   }
 
   &__slider {
-    margin-bottom: 160px;
     &-wrapper {
       width: 1335px;
+
+      @include mini-desktop {
+        width: 1100px;
+      }
+
+      @include tablet {
+        width: auto;
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
     &-article {
       &.swiper-slide {
@@ -60,6 +100,18 @@
         flex-direction: column;
         height: 634px;
         max-width: 502px;
+
+        @include mini-desktop {
+          height: 530px;
+        }
+
+        @include tablet {
+          height: 460px;
+        }
+
+        @include tablet {
+          height: auto;
+        }
       }
 
       &-title {
@@ -67,12 +119,24 @@
         line-height: 1.5;
         letter-spacing: -0.01em;
         color: var(--neutral-color-100);
+
+        @include tablet {
+          font-size: 24px;
+        }
       }
 
       &-descr {
         font-weight: 500;
         line-height: 1.77778;
         color: var(--neutral-color-150);
+
+        @include tablet {
+          font-size: 16px;
+        }
+
+        @include small-tablet {
+          display: none;
+        }
       }
 
       &-btn {
@@ -83,6 +147,10 @@
         padding: 16px 32px;
         color: var(--neutral-color-10);
         background-color: var(--neutral-color-100);
+
+        @include tablet {
+          padding: 15px 20px;
+        }
       }
     }
 
@@ -95,6 +163,10 @@
       transform: translateX(-50%);
       border-radius: 33%;
       background-color: #fff;
+
+      @include mini-desktop {
+        left: 38%;
+      }
 
       @include tablet {
         display: none;
