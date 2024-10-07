@@ -1,0 +1,35 @@
+.content {
+  padding: 120px 0;
+  background: var(--black-bg-color);
+
+  &__container {
+    display: flex;
+    gap: 32px;
+  }
+  &__column {
+    @include flex-column;
+    gap: 159px;
+  }
+
+  &__article {
+    @include flex-column;
+    gap: 24px;
+
+    &-title {
+      font-weight: 600;
+      line-height: 1.2;
+      color: #fff;
+      transition: text-decoration var(--transition);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      line-height: 1.77778;
+      color: var(--neutral-color-150);
+    }
+  }
+}
