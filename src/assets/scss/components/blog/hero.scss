@@ -1,222 +1,160 @@
 .hero {
-  &__container {
-    padding: 80px 0 160px;
-    max-width: 940px;
-
-    @include tablet {
-      max-width: 640px;
-      padding: 40px var(--container-padding) 80px;
-    }
-  }
-
+  padding: 65px 0 168px;
   &__title {
-    margin-bottom: 48px;
+    margin-bottom: 53px;
+    max-width: 959px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
 
-    @include small-tablet {
-      font-size: 60px;
+    @include tablet {
+      margin-bottom: 60px;
       text-align: center;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 128px;
+
+    @include tablet {
+      margin-bottom: 95px;
+      text-align: center;
+      justify-content: center;
     }
 
     @include mobile {
-      font-size: 48px;
-      margin-bottom: 38px;
-    }
-
-    @include small-mobile {
-      font-size: 38px;
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
   }
 
-  &__top {
-    margin-bottom: 56px;
-
-    &-info {
-      @include flex-all-between;
-      padding-top: 32px;
-      margin-bottom: 24px;
-      gap: 50px;
-
-      @include tablet {
-        align-items: flex-end;
-      }
-
-      @include small-tablet {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-      }
-    }
-
-    &-author {
-      @include flex-align-center;
-      gap: 25px;
-      min-width: 280px;
-
-      &-name {
-        margin-bottom: 4px;
-        font-weight: 600;
-        line-height: 1.44444;
-        color: var(--neutral-color-100);
-      }
-
-      &-job {
-        font-weight: 500;
-        line-height: 1.625;
-        color: var(--neutral-color-150);
-      }
-
-      &-img {
-        @include small-mobile {
-          display: none;
-        }
-      }
-    }
-
-    &-descr {
-      font-weight: 500;
-      line-height: 1.5;
-      color: var(--neutral-color-150);
-    }
-  }
-
-  &__img {
+  &__switch {
+    @include flex-align-center;
+    gap: 16px;
     margin-bottom: 80px;
 
-    @include tablet {
-      display: block;
-      max-width: 100%;
-      margin: 0 auto 80px;
+    &-item {
+      padding: 10px 14px;
     }
 
-    @include small-tablet {
-      margin-bottom: 60px;
+    &-link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
+
+      &--active {
+        font-weight: 600;
+        line-height: 1.5;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--neutral-color-100);
+      }
     }
   }
 
-  &__text {
-    font-weight: 400;
-    line-height: 1.77778;
-    color: var(--neutral-color-100);
-  }
+  &__slider {
+    &-wrapper {
+      width: 1335px;
 
-  &__bottom {
-    &-subtitle {
-      margin-bottom: 24px;
-      font-weight: 600;
-      line-height: 1.2;
-      color: var(--neutral-color-140);
-    }
+      @include mini-desktop {
+        width: 1100px;
+      }
 
-    &-author {
-      display: flex;
-      align-items: flex-start;
-      padding-top: 56px;
-      gap: 48px;
-
-      @include small-tablet {
-        gap: 38px;
+      @include tablet {
+        width: auto;
       }
 
       @include mobile {
-        position: relative;
-      }
-
-      &-img {
-        @include small-tablet {
-          width: 150px;
-
-          @include mobile {
-            position: absolute;
-            display: block;
-            right: var(--container-padding);
-            top: 15%;
-            width: 25%;
-          }
-
-          @include small-mobile {
-            display: none;
-          }
-        }
-      }
-
-      &-descr {
-        width: 645px;
-      }
-
-      &-name {
-        @include flex-column;
-        gap: 16px;
-        margin-bottom: 16px;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 1.3125;
-        letter-spacing: -0.03em;
-        color: var(--neutral-color-100);
-
-        @include mobile {
-          gap: 0;
-          font-size: 28px;
-        }
-
-        &::before {
-          content: 'Written by';
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 1.5;
-          color: #7e8492;
-        }
-
-        &::after {
-          content: 'Product Designer, Quotient';
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 1.625;
-          color: #7e8492;
-        }
-      }
-
-      &-comment {
-        font-weight: 400;
-        line-height: 1.77778;
-        color: var(--neutral-color-100);
-
-        @include tablet {
-          font-size: 16px;
-        }
+        display: none;
       }
     }
 
-    &-social {
-      &-list {
-        @include flex-align-center;
-        margin-bottom: 14px;
-        gap: 32px;
+    &-hidden{
+      display: none;
+    }
 
-        @include mini-desktop {
-          gap: 18px;
-        }
+    &-controls {
+      @include flex-all-center;
+      position: absolute;
+      top: 107px;
+      left: 530px;
+      z-index: var(--z-index-2);
+      transform: translateX(-50%);
+      border-radius: 33%;
+      background-color: #fff;
 
-        &::after {
-          content: 'Share this article';
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 1.625;
-          color: var(--neutral-color-100);
-
-          @include small-tablet {
-            display: none;
-          }
-        }
+      @include mini-desktop {
+        left: 38%;
       }
 
-      &-item svg path {
-        fill: var(--neutral-color-100);
+      @include tablet {
+        display: none;
       }
+    }
+
+    &-prev,
+    &-next {
+      @include flex-all-center;
+      width: 40px;
+      height: 80px;
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      background-color: #fff;
+      justify-content: end;
+      transition: all var(--transition);
+    }
+
+    &-prev {
+      &:hover {
+        transform: translateX(-16px);
+        justify-content: center;
+      }
+    }
+
+    &-next {
+      transform: scale(-1, -1);
+
+      &:hover {
+        transform: scale(-1, -1) translateX(-16px);
+        justify-content: center;
+      }
+    }
+  }
+
+  &__article {
+    max-width: 515px;
+
+    &-img {
+      margin-bottom: 16px;
+    }
+
+    &-head {
+      @include flex-all-between;
+      margin-bottom: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
+    }
+
+    &-author {
+      font-style: normal;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      max-width: 464px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
     }
   }
 }
