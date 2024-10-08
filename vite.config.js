@@ -25,6 +25,8 @@ export default defineConfig({
     },
   },
   plugins: [
+    injectHTML(),
+    ViteMinifyPlugin(),
     ViteImageOptimizer({
       png: {
         quality: 80,
@@ -33,7 +35,5 @@ export default defineConfig({
         quality: 80,
       },
     }),
-    injectHTML(),
-    ViteMinifyPlugin({}),
   ],
 });
