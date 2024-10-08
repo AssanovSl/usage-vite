@@ -5,6 +5,10 @@
   &__container {
     display: flex;
     gap: 32px;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
   &__column {
     @include flex-column;
@@ -14,6 +18,10 @@
   &__article {
     @include flex-column;
     gap: 24px;
+
+    @include small-tablet {
+      align-items: center;
+    }
 
     &-title {
       font-weight: 600;
@@ -30,6 +38,12 @@
       font-weight: 500;
       line-height: 1.77778;
       color: var(--neutral-color-150);
+    }
+
+    &:last-child {
+      @include small-tablet {
+        display: none;
+      }
     }
   }
 }

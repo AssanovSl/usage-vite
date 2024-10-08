@@ -1,5 +1,14 @@
 .hero {
   padding: 65px 0 168px;
+
+  @include mobile {
+    padding: 55px 0 95px;
+  }
+
+  @include mini-desktop {
+    padding: 75px 0 130px;
+  }
+
   &__title {
     margin-bottom: 53px;
     max-width: 959px;
@@ -17,6 +26,10 @@
   &__subtitle {
     margin-bottom: 128px;
 
+    @include mini-desktop {
+      margin-bottom: 108px;
+    }
+
     @include tablet {
       margin-bottom: 95px;
       text-align: center;
@@ -32,6 +45,16 @@
     @include flex-align-center;
     gap: 16px;
     margin-bottom: 80px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      display: none;
+    }
 
     &-item {
       padding: 10px 14px;
