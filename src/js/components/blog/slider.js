@@ -17,3 +17,17 @@ export const useHeroSlider = () => {
 
   return heroSlider;
 };
+
+export const useArticlesSlider = () => {
+  new Swiper('.articles__slider', {
+    modules: [Navigation],
+    initialSlide: 0,
+    spaceBetween: 32,
+    slidesPerView: 3,
+    loop: false,
+    navigation: {
+      nextEl: '.articles__btn--next',
+      prevEl: '.articles__btn--prev',
+    },
+  });
+};

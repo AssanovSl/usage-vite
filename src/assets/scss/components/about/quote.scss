@@ -10,8 +10,7 @@
   @include mobile {
     padding: 50px 0;
   }
-  &__container {
-  }
+
 
   &__content {
     @include flex-justify-between;
@@ -33,7 +32,6 @@
       @include tablet {
         font-size: 50px;
         min-width: auto;
-
       }
 
       @include mobile {

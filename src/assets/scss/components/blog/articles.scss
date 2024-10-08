@@ -1,0 +1,128 @@
+.articles {
+  padding: 160px 0;
+
+  &__top {
+    @include flex-justify-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__head {
+    max-width: 435px;
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      font-weight: 500;
+      line-height: 1.77778;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__slider {
+    &-wrapper {
+      width: 1335px;
+
+      @include mini-desktop {
+        width: 1100px;
+      }
+
+      @include tablet {
+        width: auto;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__article {
+    &.swiper-slide {
+      @include flex-column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    &-text {
+      width: auto;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.3125;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      font-weight: 500;
+      line-height: 1.77778;
+      color: var(--neutral-color-150);
+    }
+
+    &-btn {
+      border: 1px solid var(--neutral-color-40);
+      padding: 16px 32px;
+      color: var(--neutral-color-100);
+    }
+  }
+
+  //-------------------------------//
+
+  &__controls {
+    @include flex-align-center;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+
+  &__btn {
+    @include flex-all-center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--neutral-color-100);
+    border: var(--testimonials-border);
+    transition: all var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg {
+      & path {
+        fill: var(--arrow-testimonials-color);
+      }
+    }
+
+    &:first-child {
+      transform: rotate(180deg);
+    }
+
+    &.swiper-button-disabled {
+      border: var(--disabled-testimonials-border);
+      background-color: var(--disabled-testimonials-bg);
+      cursor: auto;
+      pointer-events: none;
+      transition: all var(--transition);
+
+      & svg {
+        & path {
+          fill: var(--disable-arrow-color);
+        }
+      }
+    }
+
+    &:hover {
+      opacity: 0.3;
+      transition: all var(--transition);
+    }
+  }
+}
