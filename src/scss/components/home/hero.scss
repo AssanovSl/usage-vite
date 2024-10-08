@@ -217,14 +217,14 @@
         &--red {
           color: #e35454;
           &::before {
-            background: url('../../assets/img/icons/red-arrow.svg');
+            background: url('../assets/img/icons/red-arrow.svg');
           }
         }
 
         &--green {
           color: #60d39c;
           &::before {
-            background: url('../../assets/img/icons/green-arrow.svg');
+            background: url('../assets/img/icons/green-arrow.svg');
           }
         }
 

@@ -236,7 +236,7 @@
         padding-right: 19px;
         width: 20px;
         height: 20px;
-        background: url('../img/icons/pricing-tick-icon.svg');
+        background: url('../assets/img/icons/pricing-tick-icon.svg');
         transform: translateY(2px);
       }
 
@@ -245,7 +245,7 @@
         color: var(--neutral-color-150);
 
         &::before {
-          background: url('../img/icons/pricing-no-tick-icon.svg');
+          background: url('../assets/img/icons/pricing-no-tick-icon.svg');
         }
       }
 

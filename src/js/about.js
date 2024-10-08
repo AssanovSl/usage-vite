@@ -1,4 +1,4 @@
-import '../assets/scss/about.scss';
+import '/scss/about.scss';
 
 import { useTheme } from './components/theme';
 import { useBurger } from './components/burger';
