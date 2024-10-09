@@ -13,7 +13,7 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true,
-    rollupOption: {
+    rollupOptions: {
       input: {
         main: './src/index.html',
         pricing: './src/pricing.html',
