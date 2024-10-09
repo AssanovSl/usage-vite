@@ -1,6 +1,16 @@
 .hero {
   padding: 65px 0 168px;
 
+  &-decor::before {
+    top: -35px !important;
+    left: 30px !important;
+  }
+
+  &-decor::after {
+    top: 330px !important;
+    right: -50px !important;
+  }
+
   @include mobile {
     padding: 55px 0 95px;
   }
